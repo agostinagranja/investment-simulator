@@ -31,10 +31,10 @@ Extract the daily closing prices of the S&P 500 index and make it available in a
 
 ### Diagram
 
-<img src="https://github.com/agostinagranja/investment-simulator/blob/main/diagram.jpg" width="500"> 
+<img src="https://github.com/agostinagranja/investment-simulator/blob/main/diagram.jpg" width="700"> 
 
 ## Results
 * Historical data of the S&P 500 index with incremental loading every 24 hours, centralized in database in csv file
-* Calculation of interest rate updated daily
+* Calculation of interest rate up to date
 * S&P 500 investment simulator 
 * Error handling and alerts
