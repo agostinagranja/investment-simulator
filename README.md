@@ -39,5 +39,9 @@ Extract the daily closing prices of the S&P 500 index and make it available in a
 * S&P 500 investment simulator 
 * Error handling and alerts
 
+## Side projects
+* Tableau dashboard of S&P 500 index prices[^2]
+
 ## Notes
 [^1]: Compound interest is the interest on a deposit calculated based on both the initial principal and the accumulated interest from previous periods. [More information](https://www.investopedia.com/terms/c/compoundinterest.asp) 
+[^2]: A brief analysis and viz of S&P 500 index prices can be seen on this [Tableau dashboard](https://public.tableau.com/app/profile/agostina.granja#!/) 
