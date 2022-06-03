@@ -5,7 +5,7 @@
 Finance
 
 ## Problem
-There is a necessity for a tool to simulate the result of a diversified investment in the US capital market in a personalized way. To perform a simulation such us, the data needed are:
+There is a necessity for a tool to simulate the result of a diversified investment in the US capital market in a personalized way. To perform this kind of simulation, the data needed are:
 
 1. Rate offered by the market
 2. Initial capital
