@@ -1,49 +1,39 @@
 # Investment Simulator
+### Scraping of prices of the S&P 500 index and simulation of the result of an investment in it.
 
-## Overview
-This is a tool to simulate the result of a diversified investment in the USA market, using the compound interest rate related to the S&P 500 Index. It consists of:
-* Calculation of the market rate with updated values on a daily basis, and 
-* Calculation of the final capital by means of the financial capitalization formula. 
+## Industry
+Finance
 
-All of this was created using _Python._
+## Problem
+There is a need for a tool that allows the result of a diversified investment in the US capital market to be simulated in a personalized way. The data needed to simulate this result are:
+• Rate offered by the market
+• Initial capital and/or the amount of periodic contributions
+• Investment horizon
 
-## Project goal
-Calculate the final capital that would be obtained from the investment of a capital composed by an initial capital and/or successive contributions. 
+Parameters 2 and 3 are defined by the user, while the rate offered by the United States market for a diversified and passive investment, that is, one that does not require effort on the part of the user or management by third parties, is generally represented by the compound interest rate of the S&P 500 index.
 
-## Approach
-To achieve the stated objective, we start modeling the financial capitalization formula in a python script, which requires 4 parameters:
-* Principal: the initial capital. This is a parameter entered by the user.
-* Contributions: the successive capital additions. This is also a parameter entered by the user. 
-* Investment horizon: the time period where one expects to hold an investment for a specific goal. User parameter too.
-* Compound interest rate: the annual compound interest rate currently offered by the market. This parameter is calculated based on S&P 500 index prices.
+## Project objective
+Extract the daily closing prices of the S&P 500 index and make it available in a centralized database, which serves as a supply for the calculation of the annualized rate of return, defined as a compound interest rate. Then, that allows, together with the parameters entered by the user, to determine the estimated result (final capital) of the investment.
 
-_Note: If it is of your interest, I recommend you investigate the formula of financial capitalization and compound interest._
+## Implementation process
+1. Obtaining data from external sources:
+* S&P 500 price (Source: Yahoo Finance)
+* User parameters
+2. Python script development
+* Incremental ETL
+* Automation: frequency -> once a day
+* Rate of return calculation
+* Calculation of final capital
+* Storage of simulations carried out in csv file
+3. Script testing
+* Black Box Tests
 
-#### 1) Yahoo Finance Scraper
-This python script automatically:
-* Downloads from Yahoo Finance web the value of the S&P 500 index
-* Update a csv file to store current date, value and daily change
-* It is settle to automatically do the task every day at USA market closing time (17 P.M.)
+##### Diagram
 
-This values are then used to calculate the _Compound Interest Rate._
+/assets/images/electrocat.png
 
-#### 2) Compound Interest Rate Calculator
-This python script contains a function that returns the compound interest rate, using historical prices of the S&P 500 index from the csv file created as a result of the Yahoo Finance Scraper. 
-
-#### 3) Final Capital Calculator
-The final capital is calculated within a function that, as mentioned, takes 4 parameters:
-* Principal
-* Contributions
-* Investment horizon
-* Compound interest rate: returned in the Compound Interest Rate Calculator function. 
-
-This parameters are processed through capitalization formula, using two loops, whose flow charts are below:
-
-
-As a result, this function 
-1. Returns the final capital and the effect of compound interest on principal
-2. Create a csv file with inputs and output
-3. Update this csv file every time a simulation is run
-
-###### 
-
+## Results
+* Historical data of the S&P 500 index with incremental loading every 24 hours, centralized in database in csv file
+* Calculation of interest rate updated daily
+* S&P 500 investment simulator 
+* Error handling and alerts
