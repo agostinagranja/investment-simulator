@@ -15,7 +15,7 @@ There is a need for a tool that allows the result of a diversified investment in
 Parameters from 2 to 4 are defined by the user, while the rate offered by the United States market for a diversified and passive investment, that is, one that requires minimum effort on the part of the user or none management by third parties, is generally represented by the compound interest rate of the S&P 500 index.
 
 ## Project objective
-Extract the daily closing prices of the S&P 500 index and make it available in a centralized database, which serves as a supply for the calculation of the annualized rate of return, defined as a compound interest rate. Then, that allows, together with the parameters entered by the user, to determine the estimated result (final capital) of the investment.
+Extract the daily closing prices of the S&P 500 index and make it available in a centralized database, which serves as a supply for the calculation of the annualized rate of return, defined as a compound interest rate [^1]. Then, that allows, together with the parameters entered by the user, to determine the estimated result (final capital) of the investment.
 
 ## Implementation process
 1. Obtaining data from external sources:
@@ -38,3 +38,6 @@ Extract the daily closing prices of the S&P 500 index and make it available in a
 * Calculation of interest rate up to date
 * S&P 500 investment simulator 
 * Error handling and alerts
+
+## Notes
+[^1]: Compound interest is the interest on a deposit calculated based on both the initial principal and the accumulated interest from previous periods. [More information](https://www.investopedia.com/terms/c/compoundinterest.asp) 
