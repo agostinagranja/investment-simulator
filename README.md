@@ -5,7 +5,7 @@
 Finance
 
 ## Problem
-There is a need for a tool to simulate the result of a diversified investment in the US capital market in a personalized way. The data needed are:
+There is a necessity for a tool to simulate the result of a diversified investment in the US capital market in a personalized way. To perform a simulation such us, the data needed are:
 
 1. Rate offered by the market
 2. Initial capital
@@ -15,7 +15,7 @@ There is a need for a tool to simulate the result of a diversified investment in
 Parameters from 2 to 4 are defined by the user. Meanwhile, the rate offered by the United States market for a diversified and passive investment[^1] is generally represented by the compound interest rate of the S&P 500 index.
 
 ## Project objective
-Extract the daily closing prices of the S&P 500 index and make it available in a centralized database, which serves as a supply for the calculation of the annualized rate of return, defined as a compound interest rate [^2]. Then, that allows, together with the parameters entered by the user, to determine the estimated result (final capital) of the investment.
+Extract the daily closing prices of the S&P 500 index and make it available in a centralized database, which serves as a supply for the calculation of the annualized rate of return, defined as a compound interest rate [^2]. This outcome, processed in a python script together with the parameters entered by the user, determines the estimated result (final capital) of the investment.
 
 ## Implementation process
 1. Obtaining data from external sources:
